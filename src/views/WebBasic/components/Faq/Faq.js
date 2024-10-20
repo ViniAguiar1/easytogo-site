@@ -48,8 +48,8 @@ const Faq = props => {
         <Grid item xs={12}>
           <SectionHeader
             className={classes.listItemAvatar}
-            title="Start Today For a Great SOX testing experience."
-            subtitle="Get a wonderfully detailed dashboard with daily updates on your SOX Testing project progress and an amazing turnaround testing time."
+            title="Comece hoje com uma solução personalizada de desenvolvimento."
+            subtitle="Acompanhe o progresso do seu projeto com um dashboard completo e atualizações diárias, seja para uma integração de e-commerce, ERP ou software sob medida."
             align="center"
             ctaGroup={[
               <Button
@@ -58,7 +58,7 @@ const Faq = props => {
                 size="large"
                 onClick={handleClick}
               >
-                Contact us now
+                Contate-nos
               </Button>,
             ]}
             disableGutter
@@ -67,7 +67,7 @@ const Faq = props => {
         <Grid item xs={12}>
           <SectionHeader
             className={classes.anotherOne}
-            title="Frequently Asked Questions (FAQs)"
+            title="Perguntas Frequentes (FAQs)"
             align="center"
             disableGutter
             data-aos="fade-up"

@@ -1,6 +1,9 @@
-import { List, ListItem, Toolbar, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
+import { List, ListItem, Toolbar, Typography, IconButton, Drawer } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 import { DarkModeToggler, Image } from 'components/atoms';
 import PropTypes from 'prop-types';
 import logo_dark from './Logo_transparent.png';
@@ -29,20 +32,15 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.dark,
     },
-    // color: '#2d3748', TODO: Implement this changing later
     color: theme.palette.primary.dark,
     fontSize: '1rem',
     fontFamily: 'Lato',
     fontWeight: 400,
     lineHeight: 1.5,
+    textDecoration: 'none',
   },
   listItem: {
     cursor: 'pointer',
-  },
-  listItemActive: {
-    '&> .menu-item': {
-      color: theme.palette.primary.dark,
-    },
   },
   listItemText: {
     flex: '0 0 auto',
@@ -50,30 +48,6 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: 'nowrap',
     textDecoration: 'none',
     color: 'red',
-  },
-  listItemButton: {
-    whiteSpace: 'nowrap',
-  },
-  listItemIcon: {
-    minWidth: 'auto',
-  },
-  popover: {
-    padding: theme.spacing(4),
-    border: theme.spacing(2),
-    boxShadow: '0 0.5rem 2rem 2px rgba(116, 123, 144, 0.09)',
-    minWidth: 350,
-    marginTop: theme.spacing(2),
-  },
-  iconButton: {
-    marginLeft: theme.spacing(2),
-    padding: 0,
-    '&:hover': {
-      background: 'transparent',
-    },
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-    color: theme.palette.primary.dark,
   },
   logoContainer: {
     width: 100,
@@ -99,11 +73,30 @@ const useStyles = makeStyles(theme => ({
       marginRight: 0,
     },
   },
-  menuGroupItem: {
-    paddingTop: 0,
+  iconButton: {
+    marginLeft: theme.spacing(2),
+    padding: 0,
+    '&:hover': {
+      background: 'transparent',
+    },
   },
-  menuGroupTitle: {
-    textTransform: 'uppercase',
+  mobileMenuButton: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+  desktopMenu: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+    },
+  },
+  drawer: {
+    width: 250,
+  },
+  drawerContent: {
+    padding: theme.spacing(2),
   },
 }));
 
@@ -116,12 +109,31 @@ const Topbar = ({
   ...rest
 }) => {
   const classes = useStyles();
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!isDrawerOpen);
+  };
 
   const landings = pages.landings;
   const supportedPages = pages.pages;
   const account = pages.account;
   const testers = pages.testers;
   const pricing = pages.pricing;
+
+  const menuItems = [landings, supportedPages, account, testers, pricing].map((page, i) => (
+    <ListItem key={page.id} className={clsx(classes.listItem)}>
+      <Typography
+        variant="body1"
+        color="textPrimary"
+        className={clsx(classes.listItemText, 'menu-item')}
+      >
+        <a href={page.href} className={classes.navLink}>
+          {page.title}
+        </a>
+      </Typography>
+    </ListItem>
+  ));
 
   return (
     <Toolbar disableGutters className={classes.toolbar} {...rest}>
@@ -136,34 +148,39 @@ const Topbar = ({
         </a>
       </div>
       <div className={classes.flexGrow} />
-      <List disablePadding className={classes.navigationContainer}>
-        {[landings, supportedPages, account, testers, pricing].map(
-          (page, i) => (
-            <div key={page.id}>
-              <ListItem
-                aria-describedby={page.id}
-                className={clsx(classes.listItem)}
-              >
-                <Typography
-                  variant="body1"
-                  color="textPrimary"
-                  className={clsx(classes.listItemText, 'menu-item')}
-                >
-                  <a href={page.href} className={classes.navLink}>
-                    {page.title}
-                  </a>
-                </Typography>
-              </ListItem>
-            </div>
-          ),
-        )}
-        <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
-          <DarkModeToggler
-            themeMode={themeMode}
-            onClick={() => themeToggler()}
-          />
-        </ListItem>
-      </List>
+
+      {/* Mobile Menu Button */}
+      <div className={classes.mobileMenuButton}>
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={handleDrawerToggle}
+        >
+          <MenuIcon />
+        </IconButton>
+      </div>
+
+      {/* Desktop Menu */}
+      <div className={classes.desktopMenu}>
+        <List disablePadding className={classes.navigationContainer}>
+          {menuItems}
+          <ListItem className={clsx(classes.listItem, 'menu-item--no-dropdown')}>
+            <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
+          </ListItem>
+        </List>
+      </div>
+
+      {/* Mobile Drawer Menu */}
+      <Drawer anchor="right" open={isDrawerOpen} onClose={handleDrawerToggle}>
+        <div className={classes.drawerContent}>
+          <IconButton onClick={handleDrawerToggle}>
+            <CloseIcon />
+          </IconButton>
+          <List disablePadding>{menuItems}</List>
+          <DarkModeToggler themeMode={themeMode} onClick={() => themeToggler()} />
+        </div>
+      </Drawer>
     </Toolbar>
   );
 };

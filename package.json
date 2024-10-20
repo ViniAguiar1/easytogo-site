@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "prettier": "prettier --write '**/*.{js,css,html}'",
     "clear-all": "rimraf ./build ./node_modules"
@@ -49,7 +49,8 @@
     "react-scripts": "^4.0.0",
     "react-typed": "^1.2.0",
     "react-visibility-sensor": "^5.1.1",
-    "swiper": "^5.4.1",
+    "sox-site": "file:",
+    "swiper": "^11.1.14",
     "validate.js": "^0.13.1"
   },
   "devDependencies": {

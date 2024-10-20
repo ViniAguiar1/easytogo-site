@@ -12,7 +12,7 @@ import {
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import 'leaflet/dist/leaflet.css';
 import 'assets/css/index.css';
-import 'swiper/css/swiper.min.css';
+import 'swiper/swiper-bundle.min.css';
 import 'aos/dist/aos.css';
 
 const browserHistory = createBrowserHistory();

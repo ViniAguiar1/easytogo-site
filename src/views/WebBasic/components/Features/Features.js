@@ -37,18 +37,18 @@ const Features = props => {
               <SectionHeader
                 title={
                   <span>
-                    Stay focused on your compliance Requirements.
+                    Mantenha o foco no seu crescimento e deixe a integração conosco.
                     <br />
                     <Typography
                       component="span"
                       variant="inherit"
                       color="primary"
                     >
-                      Let us handle the SOX testing piece.
+                      Deixe que cuidamos da sua gestão multicanal.
                     </Typography>
                   </span>
                 }
-                subtitle="You have a compliance program to run. Stop worrying about SOX compliance, test plans, and seasonal SOX consultants. Let us handle that for you."
+                subtitle="Você tem um negócio para gerenciar. Pare de se preocupar com integrações complicadas, múltiplos canais e processos manuais. Deixe que cuidamos disso para você."
                 align="left"
                 fadeUp
                 disableGutter
@@ -58,8 +58,8 @@ const Features = props => {
               <div className={classes.placementGrid}>
                 <div>
                   <CountUpNumber
-                    end={100}
-                    label="Completion rate"
+                    end={98}
+                    label="Taxa de satisfação"
                     textColor="primary"
                     suffix="%"
                   />
@@ -67,17 +67,18 @@ const Features = props => {
                 <div>
                   <CountUpNumber
                     end={24}
-                    label="Support"
+                    label="Suporte dedicado"
                     textColor="primary"
                     suffix="/7"
                   />
                 </div>
                 <div>
                   <CountUpNumber
-                    end={25}
-                    label="of Experience"
+                    end={10}
+                    label="De experiência no mercado"
                     textColor="primary"
-                    suffix=" years"
+                    suffix=" anos"
+                    prefix='+'
                   />
                 </div>
               </div>

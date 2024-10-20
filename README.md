@@ -1,4 +1,4 @@
-# Pmsox site - the premiere destination for SOX Testing
+# EasyToGo
 
 You might need to run these commands to ensure compatibility (yep):
 

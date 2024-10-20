@@ -45,18 +45,18 @@ const Contact = props => {
         >
           <Grid item>
             <SectionHeader
-              label="we get testing done"
+              label="Tecnologia e Marketing Avançados"
               title={
                 <>
                   <span>
-                    The first marketplace
+                    A plataforma que transforma
                     <br />
                     <Typography
                       color="secondary"
                       variant="inherit"
                       component="span"
                     >
-                      ever created for&nbsp;
+                      seus resultados em&nbsp;
                     </Typography>
                     <TypedText
                       component="span"
@@ -65,9 +65,9 @@ const Contact = props => {
                       className={classes.typed}
                       typedProps={{
                         strings: [
-                          'SOX compliance.',
-                          'crowdtesting.',
-                          'testing.',
+                          'crescimento exponencial.',
+                          'soluções personalizadas.',
+                          'sucesso garantido.',
                         ],
                         typeSpeed: 80,
                         loop: true,
@@ -76,7 +76,7 @@ const Contact = props => {
                   </span>
                 </>
               }
-              subtitle="Using pmSOX for your SOX testing needs means never worrying about meeting a SOX deadline. Our platform, talented testers and robust process will make the testing phase a pleasant experience."
+              subtitle="Com a EasyToGo, você maximiza suas vendas e automatiza processos, contando com uma equipe de especialistas e tecnologias de ponta."
               align="left"
               disableGutter
             />
@@ -100,6 +100,7 @@ const Contact = props => {
               ))}
             </Grid>
           </Grid>
+
         </Grid>
       </Grid>
     </div>

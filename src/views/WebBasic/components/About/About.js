@@ -41,15 +41,15 @@ const About = props => {
           <SectionHeader
             title={
               <span>
-                Welcome to{' '}
+                Bem vindo à{' '}
                 <Typography component="span" variant="inherit" color="primary">
-                  pmSOX.
+                  Easytogo.
                 </Typography>
                 <br />
-                <span>The one stop shop for all your SOX testing needs.</span>
+                {/* <span>Sua solução completa para automação de testes e otimização de processos empresariais.</span> */}
               </span>
             }
-            subtitle="PmSOX will help you solve your testing needs by leveraging crowdtesting while saving you precious time."
+            subtitle="Sua solução completa para automação de testes e otimização de processos empresariais."
             align="left"
             disableGutter
           />

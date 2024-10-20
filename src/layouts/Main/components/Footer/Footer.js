@@ -8,7 +8,6 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import logo_light from '../Topbar/Logo_trans_white.png';
-
 import { Image } from 'components/atoms';
 
 const useStyles = makeStyles(theme => ({
@@ -90,7 +89,6 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = props => {
   const { pages, className, ...rest } = props;
-
   const classes = useStyles();
 
   return (
@@ -104,7 +102,7 @@ const Footer = props => {
                   <Image
                     className={classes.logoImage}
                     src={logo_light}
-                    alt="thefront"
+                    alt="EasyToGo"
                     lazy={false}
                   />
                 </div>
@@ -112,21 +110,45 @@ const Footer = props => {
             </List>
           </Grid>
           <Grid item xs={3}>
-            <p className={classes.menuGroupTitle}>Copyright pmSOX 2021-2022©</p>
+            <p className={classes.menuGroupTitle}>Copyright Easytogo Solucoes Tecnologicas LTDA • 2008-2024©</p>
           </Grid>
           <Grid item xs={3}>
             <List disablePadding>
               <ListItem disableGutters>
-                <IconButton className={classes.socialIcon}>
+                <IconButton
+                  className={classes.socialIcon}
+                  component="a"
+                  href="https://www.facebook.com/seuperfil"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FacebookIcon className={classes.icon} />
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
+                <IconButton
+                  className={classes.socialIcon}
+                  component="a"
+                  href="https://www.instagram.com/easytogodigital?igsh=MTcxNDFzYzgwZ2l3OA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <InstagramIcon className={classes.icon} />
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
+                <IconButton
+                  className={classes.socialIcon}
+                  component="a"
+                  href="https://www.twitter.com/seuperfil"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TwitterIcon className={classes.icon} />
                 </IconButton>
-                <IconButton className={classes.socialIcon}>
+                <IconButton
+                  className={classes.socialIcon}
+                  component="a"
+                  href="https://www.pinterest.com/seuperfil"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <PinterestIcon className={classes.icon} />
                 </IconButton>
               </ListItem>

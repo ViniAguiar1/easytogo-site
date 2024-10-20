@@ -36,15 +36,15 @@ const Hero = props => {
           <SectionHeader
             title={
               <span>
-                Welcome to{' '}
+                Bem vindo à{' '}
                 <Typography component="span" variant="inherit" color="primary">
-                  pmSOX.
+                  Easytogo.
                 </Typography>
                 <br />
-                <span>A marketplace for all your SOX testing.</span>
+                {/* <span>A marketplace for all your SOX testing.</span> */}
               </span>
             }
-            subtitle="pmSOX gets Controls Testing done in a matter of hours instead of weeks."
+            subtitle="Potencialize seus resultados diários com o suporte da EasyToGo, oferecendo soluções completas e acessíveis em marketing e tecnologia para empresas de todos os portes."
             ctaGroup={[
               <Button
                 variant="contained"
@@ -52,8 +52,8 @@ const Hero = props => {
                 size="large"
                 // onClick={handleClick}
               >
-                <a href="https://8i3f0x8l8qy.typeform.com/to/yq2PDdpC">
-                  Apply Now!
+                <a href="#">
+                Saiba Mais Agora!
                 </a>
               </Button>,
 
@@ -64,14 +64,14 @@ const Hero = props => {
               // </Button>,
 
               <Button variant="outlined" color="primary" size="large">
-                <a href="https://www.youtube.com/watch?v=XHQx4ajvxYk">
-                  Our Webinar
+                <a href="https://br.linkedin.com/company/easytogo">
+                  Fique por Dentro
                 </a>
               </Button>,
 
               <Button variant="outlined" color="primary" size="large">
-                <a href="https://pmsox.breezy.hr/p/4b11ee7e4acc-customer-success/apply">
-                  Instant Quote
+                <a href="https://w.app/easytogo">
+                Solicite uma Proposta
                 </a>
               </Button>,
             ]}
