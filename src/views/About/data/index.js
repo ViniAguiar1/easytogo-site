@@ -1,35 +1,48 @@
 import hassanpic from './headshot1.png';
-import dadpic from './avatar-1.jpg';
 import markus from './marcus.JPG';
 
 export const team = [
   {
-    title: 'CEO / Founder',
+    title: 'CTO / Founder',
     authorPhoto: {
-      src: dadpic,
+      src: '/assets/artur.jpeg',
     },
-    authorName: 'Omar El Mghari',
+    authorName: 'Artur Aguiar',
   },
   {
-    title: 'Marketplace Director',
+    title: 'CEO / Co-Founder',
     authorPhoto: {
-      src: 'https://ca.slack-edge.com/T01K2TDTE1H-U01KSGQDM5W-64fbc38c780a-512',
+      src: '/assets/denise.jpeg',
     },
-    authorName: 'Marcel Allweins',
+    authorName: 'Denise Cavalcanti',
   },
   {
-    title: 'Developer',
+    title: 'Front-End Developer',
     authorPhoto: {
-      src: hassanpic,
+      src: '/assets/vinicius.jpeg',
     },
-    authorName: 'Hassan El Mghari',
+    authorName: 'Vinicius Aguiar',
   },
   {
-    title: 'Data Analytics Director',
+    title: 'Back-End Developer',
     authorPhoto: {
-      src: markus,
+      src: '/assets/gustavinho.jpeg',
     },
-    authorName: 'Markus Proesch',
+    authorName: 'Gustavo Henrique',
+  },
+  {
+    title: 'Social Media',
+    authorPhoto: {
+      src: '/assets/matheus.jpeg',
+    },
+    authorName: 'Matheus Silva',
+  },
+  {
+    title: 'Front-End Developer',
+    authorPhoto: {
+      src: '/assets/juninho.jpeg',
+    },
+    authorName: 'Junior Portes',
   },
 ];
 

@@ -55,7 +55,7 @@ const Main = ({ children, themeToggler, themeMode }) => {
       },
     },
     pages: {
-      title: 'About Us',
+      title: 'Sobre nós',
       id: 'supported-pages',
       href: '/about',
       children: {
@@ -115,19 +115,8 @@ const Main = ({ children, themeToggler, themeMode }) => {
         },
       },
     },
-    testers: {
-      title: 'For Testers',
-      id: 'testers-pages',
-      href: 'https://pmsox.breezy.hr/?',
-    },
-    pricing: {
-      title: 'Business Model',
-      id: 'pricing',
-      // href: 'https://pmsox-pricing.vercel.app/',
-      href: 'https://www.youtube.com/watch?v=XHQx4ajvxYk',
-    },
     account: {
-      title: 'Contact Us',
+      title: 'Contato',
       id: 'account',
       href: '/contact-page',
       children: {

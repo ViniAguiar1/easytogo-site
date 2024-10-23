@@ -37,8 +37,8 @@ const Contact = props => {
             <SectionHeader
               styles={{ padding: '20px' }}
               className={classes.secHeader}
-              title="Contact details"
-              subtitle="Interested in learning more? Contact us."
+              title="Detalhes de Contato"
+              subtitle="Interessado em saber mais sobre como desenvolvemos sistemas de alta qualidade? Entre em contato conosco."
               subtitleProps={{
                 variant: 'body1',
                 color: 'textPrimary',
@@ -56,8 +56,8 @@ const Contact = props => {
                   />
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Phone"
-                  secondary="+1 856-214-1924"
+                  primary="Telefone"
+                  secondary="+55(11) 3947-2635"
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',
@@ -78,7 +78,7 @@ const Contact = props => {
                 </ListItemAvatar>
                 <ListItemText
                   primary="Email"
-                  secondary="support@pmsox.com"
+                  secondary="atendimento@easytogo.com.br"
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',
@@ -98,8 +98,8 @@ const Contact = props => {
                   />
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Head Office"
-                  secondary="New Jersey, US"
+                  primary="Escritório Central"
+                  secondary="São Paulo, SP, Brasil"
                   primaryTypographyProps={{
                     variant: 'subtitle1',
                     color: 'textSecondary',

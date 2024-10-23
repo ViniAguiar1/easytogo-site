@@ -40,14 +40,14 @@ const Form = props => {
     defaultMatches: true,
   });
 
-  const [name, setName] = useState('');
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [mensagem, setMensagem] = useState('');
 
   return (
     <div className={classes.root} {...rest}>
       <SectionHeader
-        title="Can't find the answer you need?"
+        title="Não encontrou a resposta que precisa?"
         subtitleProps={{
           variant: 'body1',
           color: 'textPrimary',
@@ -67,17 +67,17 @@ const Form = props => {
               color="textPrimary"
               className={classes.inputTitle}
             >
-              Full name
+              Nome completo
             </Typography>
             <TextField
-              placeholder="Your full name"
+              placeholder="Seu nome completo"
               variant="outlined"
               size="medium"
               name="name"
               fullWidth
               type="text"
-              value={name}
-              onChange={e => setName(e.target.value)}
+              value={nome}
+              onChange={e => setNome(e.target.value)}
             />
           </Grid>
           <Grid item xs={12} data-aos="fade-up">
@@ -89,7 +89,7 @@ const Form = props => {
               E-mail
             </Typography>
             <TextField
-              placeholder="Your e-mail address"
+              placeholder="Seu endereço de e-mail"
               variant="outlined"
               size="medium"
               name="email"
@@ -105,17 +105,17 @@ const Form = props => {
               color="textPrimary"
               className={classes.inputTitle}
             >
-              Message
+              Mensagem
             </Typography>
             <TextField
-              placeholder="Your question about our services"
+              placeholder="Sua pergunta sobre nossos serviços"
               variant="outlined"
               name="message"
               fullWidth
               multiline
-              value={message}
+              value={mensagem}
               rows={2}
-              onChange={e => setMessage(e.target.value)}
+              onChange={e => setMensagem(e.target.value)}
             />
           </Grid>
           <Grid item container justify="center" xs={12}>
@@ -125,7 +125,7 @@ const Form = props => {
               color="primary"
               size="large"
             >
-              submit
+              Enviar
             </Button>
           </Grid>
         </Grid>

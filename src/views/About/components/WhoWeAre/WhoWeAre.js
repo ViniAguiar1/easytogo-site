@@ -17,8 +17,8 @@ const WhoWeAre = props => {
       <Grid container spacing={isMd ? 4 : 2}>
         <Grid item xs={12} sm={6} data-aos="fade-up">
           <SectionHeader
-            title="Who are we?"
-            subtitle="We are a strong complementary team with deep domain expertise in SOX compliance with several SOX projects in our belt, an ambitious CTO, an expert of marketplaces design for efficiency & a data analytics expert. Our organization enables us to be your one stop shop for your SOX testing needs from start to finish."
+            title="Quem somos?"
+            subtitle="Somos uma equipe especializada em desenvolver sistemas de alta qualidade, com foco em proporcionar a melhor experiência ao usuário. Nosso time é composto por desenvolvedores experientes e criativos, prontos para criar soluções personalizadas e eficientes para atender às necessidades de nossos clientes."
             disableGutter
             align="left"
             subtitleProps={{
@@ -29,8 +29,8 @@ const WhoWeAre = props => {
         </Grid>
         <Grid item xs={12} sm={6} data-aos="fade-up">
           <SectionHeader
-            title="What can we help you with?"
-            subtitle="We help you craft your testing strategy, keeping your external auditor in the loop, and then executing it in no time. We source the right pool & mix of testers that allow for maximal reliance by your external auditors.  You & external auditor have access to our interactive dashboard for SOX testing results on a real time basis."
+            title="Como podemos te ajudar?"
+            subtitle="A EasyToGo está preparada para transformar suas ideias em sistemas robustos, eficientes e com alto desempenho. Nossos serviços cobrem todas as etapas do desenvolvimento de software, desde o planejamento até a execução final, com o objetivo de proporcionar a melhor experiência possível ao usuário."
             disableGutter
             align="left"
             subtitleProps={{

@@ -118,10 +118,9 @@ const Topbar = ({
   const landings = pages.landings;
   const supportedPages = pages.pages;
   const account = pages.account;
-  const testers = pages.testers;
-  const pricing = pages.pricing;
 
-  const menuItems = [landings, supportedPages, account, testers, pricing].map((page, i) => (
+  // Removi os itens "testers" e "pricing" que estavam causando o erro
+  const menuItems = [landings, supportedPages, account].map((page, i) => (
     <ListItem key={page.id} className={clsx(classes.listItem)}>
       <Typography
         variant="body1"

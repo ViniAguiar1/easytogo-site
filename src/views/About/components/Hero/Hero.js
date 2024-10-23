@@ -44,7 +44,7 @@ const Hero = props => {
       <Image
         src="https://assets.maccarianagency.com/the-front/photos/about/hero-image.png"
         srcSet="https://assets.maccarianagency.com/the-front/photos/about/hero-image.png 2x"
-        alt="About"
+        alt="Sobre Nós"
         className={classes.image}
         lazyProps={{
           width: '100%',
@@ -53,8 +53,8 @@ const Hero = props => {
       />
       <Section className={classes.section}>
         <SectionHeader
-          title="About us"
-          subtitle="We are a team of talented professionals in SOX compliance, software engineering, data analytics, and marketplace platform design."
+          title="Sobre a EasyToGo"
+          subtitle="Na EasyToGo, oferecemos soluções completas para facilitar sua jornada digital. Nossa equipe se dedica a fornecer serviços de excelência em tecnologia, garantindo eficiência e suporte em todas as suas necessidades."
           align="left"
           data-aos="fade-up"
           disableGutter

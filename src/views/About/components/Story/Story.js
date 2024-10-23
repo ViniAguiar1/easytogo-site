@@ -15,23 +15,22 @@ const Twopara = () => {
   return (
     <div>
       <p>
-        Testing controls is critical to an audit as it is used to support the
-        audit firm’s opinion of the effectiveness of ICFR in an integrated audit
-        and to modify the nature, timing, and extent of substantive testing in
-        financial statement and integrated audits.
+        Na EasyToGo, nosso objetivo é desenvolver sistemas de alta qualidade que
+        elevam a experiência do usuário. Aplicamos as mais recentes inovações em
+        tecnologia para entregar soluções eficientes, intuitivas e personalizadas
+        para cada projeto.
       </p>
       <br></br>
       <p>
-        Whether a first-year SOX company or an old combatant, you need to test
-        your key controls for design & operating effectiveness at least on a
-        quarterly basis. That is a hectic phase in any SOX compliance
-        assessment. It requires a large multidisciplinary team of testers for
-        weeks to get the job done. We can handle it for you in matter of few
-        days!
+        Contamos com uma equipe dedicada, focada em oferecer soluções que otimizam
+        processos e facilitam a interação com plataformas digitais. Seja qual for
+        sua necessidade, nós estamos prontos para transformar suas ideias em
+        realidade, com sistemas robustos e de alta performance.
       </p>
     </div>
   );
 };
+
 const Story = props => {
   const { className, ...rest } = props;
   const classes = useStyles();
@@ -60,8 +59,8 @@ const Story = props => {
         >
           <div>
             <SectionHeader
-              title="Our purpose"
-              subtitle=<Twopara />
+              title="Nosso Propósito"
+              subtitle={<Twopara />}
               align="left"
               disableGutter
               subtitleProps={{
@@ -82,7 +81,7 @@ const Story = props => {
         >
           <Image
             src="https://assets.maccarianagency.com/the-front/illustrations/working-on-sofa.svg"
-            alt="Our story"
+            alt="Nossa história"
             className={classes.image}
           />
         </Grid>

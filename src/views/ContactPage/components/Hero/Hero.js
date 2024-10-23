@@ -48,7 +48,7 @@ const Hero = props => {
     <div className={clsx(classes.root, className)} {...rest}>
       <Section className={classes.section}>
         <SectionHeader
-          title="Contact us"
+          title="Contate-nos"
           align="left"
           data-aos="fade-up"
           disableGutter
